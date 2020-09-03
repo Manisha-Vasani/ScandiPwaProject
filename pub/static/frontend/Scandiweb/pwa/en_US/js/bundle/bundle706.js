@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Vertex_AddressValidation/js/model/address-converter.js":"/**\n * @copyright  Vertex. All rights reserved.  https://www.vertexinc.com/\n * @author     Mediotype                     https://www.mediotype.com/\n */\n\ndefine([\n    'Magento_Customer/js/model/customer/address',\n    'Vertex_AddressValidation/js/lib/jquery.serialize-object'\n], function (customerAddress) {\n    'use strict';\n\n    return function (form) {\n        var addressData = form.serializeObject();\n\n        addressData.region = {\n            region_id: addressData.region_id,\n            region: addressData.region\n        };\n        return customerAddress(addressData);\n    };\n});\n"}
+}});

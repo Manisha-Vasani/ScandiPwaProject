@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"mage/ie-class-fixer.js":"/**\n * Copyright \u00a9 Magento, Inc. All rights reserved.\n * See COPYING.txt for license details.\n */\n\n/* eslint-disable strict */\n(function () {\n    var userAgent = navigator.userAgent, // user agent identifier\n        html = document.documentElement, // html tag\n        gap = ''; // gap between classes\n\n    if (html.className) { // check if neighbour class exist in html tag\n        gap = ' ';\n    } // end if\n\n    if (userAgent.match(/Trident.*rv[ :]*11\\./)) { // Special case for IE11\n        html.className += gap + 'ie11';\n    } // end if\n\n})();\n"}
+}});

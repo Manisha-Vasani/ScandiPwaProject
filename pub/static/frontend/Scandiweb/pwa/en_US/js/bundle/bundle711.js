@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Vertex_AddressValidation/js/action/address-validation-request.js":"/**\n * @copyright  Vertex. All rights reserved.  https://www.vertexinc.com/\n * @author     Mediotype                     https://www.mediotype.com/\n */\n\ndefine([\n    'mage/storage',\n    'Vertex_AddressValidation/js/model/url-builder'\n], function (\n    storage,\n    urlBuilder\n) {\n    'use strict';\n\n    return function (address) {\n        return storage.post(\n            urlBuilder.createUrl('/vertex-address-validation/vertex-address', {}),\n            JSON.stringify({\n                address: address\n            })\n        );\n    };\n});\n"}
+}});

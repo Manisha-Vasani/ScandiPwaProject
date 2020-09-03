@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Magento_Authorizenet/js/view/payment/authorizenet.js":"/**\n * Copyright \u00a9 Magento, Inc. All rights reserved.\n * See COPYING.txt for license details.\n */\n\ndefine([\n    'uiComponent',\n    'Magento_Checkout/js/model/payment/renderer-list'\n],\nfunction (Component, rendererList) {\n    'use strict';\n\n    rendererList.push(\n        {\n            type: 'authorizenet_directpost',\n            component: 'Magento_Authorizenet/js/view/payment/method-renderer/authorizenet-directpost'\n        }\n    );\n\n    /** Add view logic here if needed */\n    return Component.extend({});\n});\n"}
+}});
